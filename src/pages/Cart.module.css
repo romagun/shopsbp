@@ -1,0 +1,152 @@
+.cart {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 20px;
+}
+
+.cart h1 {
+  margin-bottom: 2rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+}
+
+.items {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto auto auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.itemInfo h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.itemPrice {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantityControls button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.itemTotal {
+  font-weight: bold;
+  min-width: 80px;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff4757;
+  font-size: 1.2rem;
+}
+
+.summary {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  padding-top: 1rem;
+  border-top: 2px solid #ddd;
+}
+
+.checkoutButton, .clearButton {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.checkoutButton {
+  background: #28a745;
+  color: white;
+}
+
+.checkoutButton:hover {
+  background: #218838;
+}
+
+.checkoutButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.clearButton {
+  background: #ff4757;
+  color: white;
+}
+
+.emptyCart {
+  text-align: center;
+  padding: 4rem 20px;
+}
+
+.shopLink {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  
+  .item {
+    grid-template-columns: 60px 1fr;
+    gap: 0.5rem;
+  }
+  
+  .quantityControls, .itemTotal, .removeButton {
+    grid-column: span 2;
+    justify-self: start;
+  }
+}
