@@ -49,7 +49,7 @@ function Cart() {
                 <span>{item.quantity}</span>
                 <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
               </div>
-              {/* Итоговая сумма в рублях */}
+              {}
               <div className={styles.itemTotal}>
                 ₽{toRub(item.price * item.quantity)}
               </div>

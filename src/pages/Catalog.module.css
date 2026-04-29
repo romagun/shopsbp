@@ -111,3 +111,21 @@
     flex-direction: column;
   }
 }
+
+.retryButton {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: #34c396;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.retryButton:hover {
+  background: #030514;
+}
+
+
+
+
